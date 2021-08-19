@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bienvenido a mi</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">GF</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="Portfolio.html">Mi portfolio</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="carrito.html">Carrito</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="contacto.html" tabindex="-1" aria-disabled="true">Contacto</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+</head>
+<body>
+<div class="container"> 
+	<h2 class="w3-center">Galeria de obras</h2>
+<p>Selecciona las obras para incluirlas a tu carrito</p>
+	<div class="w3-content w3-section" style="max-width:500px">
+	  <img class="mySlides" src="img1.jpg" style="width:100%" > 
+	  <img class="mySlides" src="img2.jpg" style="width:100%">
+	  <img class="mySlides" src="img3.jpg" style="width:100%">
+	  <img class="mySlides" src="img4.jpg" style="width:100%">
+	  <img class="mySlides" src="img5.jpg" style="width:100%">
+	  <img class="mySlides" src="IMG6.jpg" style="width:100%">
+	</div>
+	
+	<script>
+	var myIndex = 0;
+	carousel();
+	
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  setTimeout(carousel, 2000); // Change image every 2 seconds
+	}
+	</script>
+		</div>
+		<br><br><br><br>
+
+</html>
